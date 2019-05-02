@@ -1,7 +1,14 @@
 
 public abstract class TaxComputation {
-	
-	//pass in PurchasedItems and ReceiptDate object from respective classes 
+
+	private String stateCode;
 	public abstract double computeTax(PurchasedItems items, BasicReceipt date);
-	protected abstract boolean taxHoliday();
+	protected abstract boolean taxHoliday(RecepitDate date);
+
+	public String getStateCode() {
+
+		return stateCode;
+
+	}
+
 }

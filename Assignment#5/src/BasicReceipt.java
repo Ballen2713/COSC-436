@@ -5,7 +5,7 @@ public class BasicReceipt implements Receipt{
 	private String stateCode;
 	
 	private PurchasedItems items;
-	private Date date;
+	private ReceiptDate date;
 	private TaxComputation tc;
 	
 	public BasicReceipt(PurchasedItems items) { 
@@ -16,11 +16,25 @@ public class BasicReceipt implements Receipt{
 		this.tc = tc;
 	}
 	
-	public void setDate(Date date){ 
+	public void setDate(ReceiptDate date){
 		this.date = date;
 	}
 	
 	public void prtReceipt() { 
-		
+		System.out.println(this.storeInfo);
+		System.out.println(this.stateCode);
+		System.out.println(this.date.getDate());
+
+		for(int i = 0 ; i < items.size() ; i++) {
+
+			System.out.println(items.get(i).getItemCode() + " " + items.get(i).getDescend() + " " + items.get(i).getPrice());
+
+		}
+
+		System.out.println("subtotal: " + items.getTotalCost());
+
+		double total = tc.computeTax(items, date) + items.getTotalCost();
+
+		System.out.println("total: " + total);
 	}
 }

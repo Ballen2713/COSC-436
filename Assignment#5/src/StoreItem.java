@@ -3,32 +3,38 @@ public class StoreItem {
 	private String itemCode; 
 	private String itemDescription;
 	private String itemPrice;
-	
+
+
 	public String getItemCode() {
-		return itemCode;
+		return this.itemCode;
 	}
 
-	public void setItemCode(String itemCode) {
-		this.itemCode = itemCode;
+	public void setItemCode(String cd) {
+		itemCode = cd;
 	}
 
 	public String getItemDescription() {
-		return itemDescription;
+		return this.itemDescription;
 	}
 
-	public void setItemDescription(String itemDescription) {
-		this.itemDescription = itemDescription;
+	public void setItemDescription(String dsc) {
+		itemDescription = dsc;
 	}
 
 	public String getItemPrice() {
-		return itemPrice;
+		return this.itemPrice;
 	}
 
-	public void setItemPrice(String itemPrice) {
-		this.itemPrice = itemPrice;
+	public void setItemPrice(String prc) {
+		itemPrice = prc;
 	}
 
-	public StoreItem() { 
-		
+	public StoreItem(String code, String description, Double price) {
+
+		itemCode = code;
+		itemDescription = description;
+		itemPrice = price;
+
 	}
+
 }
