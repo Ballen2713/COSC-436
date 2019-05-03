@@ -26,10 +26,4 @@ public class TaxComputationCA extends TaxComputation {
 
     }
 
-	@Override
-	public double computeTax(PurchasedItems items, ReceiptDate date) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
 }

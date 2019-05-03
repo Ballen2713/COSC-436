@@ -8,7 +8,7 @@ public class PurchasedItems {
 		items = new ArrayList<StoreItem>();
 	}
 	
-	public void addItem(StoreItem item){ 
+	public void add(StoreItem item){ 
 
 		items.add(item);
 

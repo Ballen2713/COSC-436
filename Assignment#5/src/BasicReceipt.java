@@ -33,7 +33,7 @@ public class BasicReceipt implements Receipt{
 
 		System.out.println("subtotal: " + items.getTotalCost());
 
-		double total = tc.computeTax(items, date) + items.getTotalCost();
+		double total = tc.computingTax(items, date) + items.getTotalCost();
 
 		System.out.println("total: " + total);
 	}

@@ -26,7 +26,7 @@ public class Client {
         String month = date.substring(3,5);
         String year = date.substring(6,9) + date.substring(9);
 
-        ReceiptDate receiptdate = new ReceiptDate;
+        ReceiptDate receiptdate = new ReceiptDate();
 
         receiptdate.setDate();
         receiptdate.setDay(day);
@@ -34,7 +34,7 @@ public class Client {
         receiptdate.setYear(year);
 
         Receipt receipt = receiptfactory.getReceipt(purchaseditems, receiptdate);
-        receipt.ptrReceipt();
+        receipt.prtReceipt();
 
     }
 

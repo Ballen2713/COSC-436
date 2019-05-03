@@ -20,7 +20,7 @@ public class ReceiptFactory {
         String f = "/Users/marga/COSC-436/Assignment#5/src/in.txt";
         String[] in = new String[4];
 
-        int i;
+        int i = 0;
 
         Scanner reader = new Scanner(new File(f));
 
@@ -52,11 +52,11 @@ public class ReceiptFactory {
                 greeting = new HolidayGreeting(),
         };
 
-        for (int i = 0 ; i < taxComputationObjects.length ; i++) {
+        for (int j = 0 ; j < taxComputationObjects.length ; j++) {
 
-            if(storeheader.getStateCode().equals(taxComputationObjects[i].getStateCode())) {
+            if(storeheader.getStateCode().equals(taxComputationObjects[j].getStateCode())) {
 
-                tc = taxComputationObjects[i]
+                tc = taxComputationObjects[j]
                 ;
             }
 
@@ -64,7 +64,7 @@ public class ReceiptFactory {
 
     }
 
-    public Receipt getReceipt(PurchasedItems items, Receipt date) {
+    public Receipt getReceipt(PurchasedItems items, ReceiptDate date) {
 
         System.out.println(storeheader.toString());
         Decorator before, after;
@@ -80,15 +80,16 @@ public class ReceiptFactory {
 
                 }
             }
+        }
 
             br.setDate(date);
             br.setTaxComputation(tc);
 
-            for (int i = 0 ; i < addOns.length ; i++) {
+            for (int j = 0 ; j < addOns.length ; j++) {
 
-                if((addOns[i].applies(items) && addOns[i] instanceof Rebate ) || (addOns[i].applies(items) && addOns[i] instanceof Coupon)) {
+                if((addOns[j].applies(items) && addOns[j] instanceof Rebate ) || (addOns[j].applies(items) && addOns[j] instanceof Coupon)) {
 
-                    after = new AfterDecorator(addOns[i], br);
+                    after = new AfterDecorator(addOns[j], br);
 
                 }
 
@@ -99,5 +100,3 @@ public class ReceiptFactory {
         }
 
     }
-
-}

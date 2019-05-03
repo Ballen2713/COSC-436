@@ -20,7 +20,7 @@ public class TaxComputeMD extends TaxComputation {
 
     }
 
-    public String getStateCode {
+    public String getStateCode() {
 
         return stateCode;
 
