@@ -1,6 +1,6 @@
 public class ReceiptDate {
 
-    private String date;
+    private String year;
     private String day;
     private String month;
     private String date;

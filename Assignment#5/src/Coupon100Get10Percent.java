@@ -14,7 +14,7 @@ public class Coupon100Get10Percent implements AddOn, Coupon {
 
     public String getLines() {
 
-        return "coupon for 10% accepted."
+        return "coupon for 10% accepted.";
 
     }
 

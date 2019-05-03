@@ -27,7 +27,7 @@ public class BasicReceipt implements Receipt{
 
 		for(int i = 0 ; i < items.size() ; i++) {
 
-			System.out.println(items.get(i).getItemCode() + " " + items.get(i).getDescend() + " " + items.get(i).getPrice());
+			System.out.println(items.get(i).getItemCode() + " " + items.get(i).getItemDescription() + " " + items.get(i).getItemPrice());
 
 		}
 

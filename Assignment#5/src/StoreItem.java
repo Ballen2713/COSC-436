@@ -2,7 +2,7 @@
 public class StoreItem {
 	private String itemCode; 
 	private String itemDescription;
-	private String itemPrice;
+	private double itemPrice;
 
 
 	public String getItemCode() {
@@ -21,15 +21,15 @@ public class StoreItem {
 		itemDescription = dsc;
 	}
 
-	public String getItemPrice() {
+	public double getItemPrice() {
 		return this.itemPrice;
 	}
 
-	public void setItemPrice(String prc) {
+	public void setItemPrice(double prc) {
 		itemPrice = prc;
 	}
 
-	public StoreItem(String code, String description, Double price) {
+	public StoreItem(String code, String description, double price) {
 
 		itemCode = code;
 		itemDescription = description;

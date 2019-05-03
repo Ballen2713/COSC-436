@@ -28,7 +28,7 @@ public class StoreHeader {
 
     public String toString() {
 
-        return streetAddress + "\n" + stateCode + "\n" + phoneNumber "\n" + storeNumber;
+        return streetAddress + "\n" + stateCode + "\n" + phoneNumber + "\n" + storeNumber;
 
     }
 

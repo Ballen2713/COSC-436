@@ -6,7 +6,7 @@ public class ReceiptFactory {
     String header;
     String statecode;
 
-    private taxComputation[] taxComputationObjects;
+    private TaxComputation[] taxComputationObjects;
     private TaxComputation tc;
     private AddOn[] addOns;
     private StoreHeader storeheader;
@@ -39,20 +39,20 @@ public class ReceiptFactory {
 
         taxComputationObjects = new TaxComputation[] {
 
-                CA = new TaxComputationCA;
-                MA = new TaxComputationMA;
-                MD = new TaxComputationMD;
+                CA = new TaxComputationCA(),
+                MA = new TaxComputationMA(),
+                MD = new TaxComputeMD(),
 
         };
 
         addOns = new AddOn[] {
 
-                rebate = new RebateItem();
-                coupon = new CouponPercent();
-                greeting = new HolidayGreeting();
+                rebate = new RebateItem(),
+                coupon = new Coupon100Get10Percent(),
+                greeting = new HolidayGreeting(),
         };
 
-        for (int i = 0 ; i < taxComputationObjects.length() ; i++) {
+        for (int i = 0 ; i < taxComputationObjects.length ; i++) {
 
             if(storeheader.getStateCode().equals(taxComputationObjects[i].getStateCode())) {
 
@@ -76,7 +76,7 @@ public class ReceiptFactory {
 
                 if(addOns[i] instanceof SecondaryHeading) {
 
-                    before = new beforeDecorator(addOns[i], br);
+                    before = new BeforeDecorator(addOns[i], br);
 
                 }
             }
@@ -88,7 +88,7 @@ public class ReceiptFactory {
 
                 if((addOns[i].applies(items) && addOns[i] instanceof Rebate ) || (addOns[i].applies(items) && addOns[i] instanceof Coupon)) {
 
-                    after = new afterDecorator(addOns[i], br);
+                    after = new AfterDecorator(addOns[i], br);
 
                 }
 

@@ -9,7 +9,7 @@ public class BeforeDecorator extends Decorator {
 
     }
 
-    public void ptrReceipt() {
+    public void prtReceipt() {
 
         System.out.println(addOn.getLines());
 

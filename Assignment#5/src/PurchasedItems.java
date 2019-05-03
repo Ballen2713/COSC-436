@@ -38,9 +38,9 @@ public class PurchasedItems {
 
 			}
 
-			return false;
-
 		}
+		
+		return false;
 
 	}
 

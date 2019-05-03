@@ -9,7 +9,7 @@ public class AfterDecorator extends Decorator {
 
     }
 
-    public void ptrReceipt() {
+    public void prtReceipt() {
 
         callTrailer();
 

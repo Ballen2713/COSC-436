@@ -1,4 +1,4 @@
-public class TaxComputationMD extends TaxComputation {
+public class TaxComputationCA extends TaxComputation {
 
     private String stateCode;
 
@@ -25,5 +25,11 @@ public class TaxComputationMD extends TaxComputation {
         return stateCode;
 
     }
+
+	@Override
+	public double computeTax(PurchasedItems items, ReceiptDate date) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 
 }
