@@ -22,16 +22,16 @@ public class Client {
         date = reader.nextLine();
         reader.close();
 
-        String day = date.substring(0,2);
-        String month = date.substring(3,5);
+        String day = date.substring(3,5);
+        String month = date.substring(0,2);
         String year = date.substring(6,9) + date.substring(9);
 
         ReceiptDate receiptdate = new ReceiptDate();
 
-        receiptdate.setDate();
         receiptdate.setDay(day);
         receiptdate.setMonth(month);
         receiptdate.setYear(year);
+        receiptdate.setDate();
 
         Receipt receipt = receiptfactory.getReceipt(purchaseditems, receiptdate);
         receipt.prtReceipt();
