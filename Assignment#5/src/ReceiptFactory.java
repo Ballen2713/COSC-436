@@ -17,13 +17,12 @@ public class ReceiptFactory {
 
         AddOn coupon, greeting, rebate;
 
-        String f = "/Users/marga/COSC-436/Assignment#5/src/in.txt";
+        String f = "B:/JavaWork/COSC-436/Assignment#5/src/in.txt";
         String[] in = new String[4];
 
         int i = 0;
 
         Scanner reader = new Scanner(new File(f));
-
         while(reader.hasNextLine()) {
 
             in[i] = reader.nextLine();
@@ -31,6 +30,8 @@ public class ReceiptFactory {
             System.out.println(in[i]);
 
             i++;
+            
+            
         }
 
         reader.close();

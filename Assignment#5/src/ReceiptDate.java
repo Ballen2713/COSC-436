@@ -6,9 +6,9 @@ public class ReceiptDate {
     private String date;
 
     public ReceiptDate(String dy, String mnth, String yr) {
-
+    	
+    	month = mnth;
         day = dy;
-        month = mnth;
         year = yr;
 
     }
@@ -18,15 +18,16 @@ public class ReceiptDate {
 
     }
 
-    public void setDay(String dy) {
-
-        day = dy;
-
-    }
-
+  
     public void setMonth(String mnth) {
 
         month = mnth;
+
+    }
+    
+  public void setDay(String dy) {
+
+        day = dy;
 
     }
 
@@ -36,15 +37,16 @@ public class ReceiptDate {
 
     }
 
-    public String getDay() {
-
-        return day;
-
-    }
-
+    
     public String getMonth() {
 
         return month;
+
+    }
+    
+    public String getDay() {
+
+        return day;
 
     }
 
@@ -56,7 +58,7 @@ public class ReceiptDate {
 
     public void setDate() {
 
-        date = this.day + "-" + this.month + "-" + this.year;
+        date = this.month + "/" + this.day + "/" + this.year;
 
     }
 

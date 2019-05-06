@@ -1,11 +1,12 @@
 public class TaxComputationMA extends TaxComputation {
 
     private String stateCode = "MA";
-
+    HolidayGreeting hg = new HolidayGreeting();
+	
     public double computingTax (PurchasedItems items, ReceiptDate date) {
 
         if(taxHoliday(date)) {
-
+        	System.out.println(hg.getLines());
             return 0.0;
 
         }
@@ -18,6 +19,7 @@ public class TaxComputationMA extends TaxComputation {
 
         if(date.getDate().equals("08/13/2019")|| date.getDate().equals("08/14/2019")) {
 
+
             return true;
 
         }
@@ -27,7 +29,7 @@ public class TaxComputationMA extends TaxComputation {
     }
 
     public String getStateCode() {
-
+    
         return stateCode;
 
     }

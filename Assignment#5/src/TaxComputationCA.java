@@ -1,6 +1,6 @@
 public class TaxComputationCA extends TaxComputation {
 
-    private String stateCode;
+    private String stateCode = "CA";
 
     public double computingTax (PurchasedItems items, ReceiptDate date) {
 
@@ -10,7 +10,7 @@ public class TaxComputationCA extends TaxComputation {
 
         }
 
-        return items.getTotalCost();
+        return items.getTotalCost() * 0.0725;
 
     }
 
