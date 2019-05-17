@@ -1,8 +1,23 @@
+import java.util.ArrayList;
 
 public class Menu {
-	static final int MAX_ITEMS = 6;
-	int numberOfItems = 0;
-	MenuItem[] menuItems;
+	ArrayList<String> menuItems;
+	
+	public Menu()
+	{
+		menuItems = new ArrayList<String>();
+		addItem("pork");
+		addItem("burger");
+		addItem("pizza");
+	}
+	
+	public void addItem(String name) {
+		menuItems.add(name);
+	}
+	
+	public ArrayList<String> getMenuItems() {
+		return menuItems;
+	}
 	
 	public Iterator createIterator() {
 		return new MenuIterator(menuItems);

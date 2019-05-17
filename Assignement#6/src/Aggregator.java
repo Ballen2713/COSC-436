@@ -1,8 +1,8 @@
 
 public class Aggregator extends Menu {
 	MenuItem menu;
-	public int getMenuItemNumber() {
-		return menu.menuItemNumber;
+	public String getName() {
+		return menu.name;
 	}
 	
 	public double getCost() {

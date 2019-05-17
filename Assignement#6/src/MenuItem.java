@@ -1,11 +1,11 @@
 
 public class MenuItem {
-	int menuItemNumber;
+	String name;
 	double cost;
 	String description;
 	
-	public MenuItem (int menuItemNumber, double cost, String description) {
-		this.menuItemNumber = menuItemNumber;
+	public MenuItem (String name, double cost, String description) {
+		this.name = name;
 		this.cost = cost;
 		this.description = description;
 	}

@@ -1,19 +1,13 @@
 import java.util.ArrayList;
 
-public class MenuIterator implements Iterator {
+public class OrderIterator implements Iterator {
 	ArrayList<String> items;
 	int position = 0;
 	
-	public MenuIterator(ArrayList<String> items) {
+	public OrderIterator(ArrayList<String> items) {
 		this.items = items;
 	}
-
-	public String next() {
-		String menuItem = (String) items.get(position);
-		position = position + 1;
-		return menuItem;
-	}
-
+	@Override
 	public boolean hasNext() {
 		if (position >= items.size() || items.get(position) == null) {
 			return false;
@@ -21,6 +15,13 @@ public class MenuIterator implements Iterator {
 		else {
 			return true;
 		}
+	}
+
+	@Override
+	public String next() {
+		String orderItem = (String) items.get(position);
+		position = position +1;
+		return orderItem;
 	}
 
 }
