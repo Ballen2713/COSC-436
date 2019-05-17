@@ -1,4 +1,4 @@
 
-public class Orders {
+public class Orders extends Menu{
 
 }
